@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cpanel</title>
+    <link rel="stylesheet" href="/css/style_cpanel.css">
+    <link rel="stylesheet" href="/css/modal_cpanel.css">
+
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+
+    <!-- header começo -->
+    <header>
+        <label for="check">
+            <ion-icon name="menu-outline" id="sidebar_btn"></ion-icon>
+        </label>
+
+        <div class="left">
+            <h3> Menu <span>OnLine</span></h3>
+        </div>
+        <div class="right">
+            <a href="#"" class=" sair_btn">Sair</a>
+        </div>
+    </header>
+    <!-- header final -->
+
+    <!-- sidebar começo -->
+    <div class="sidebar">
+        <center>
+            <img src="/img/ana_cpanel.jpg" class="image" alt="">
+            <h2>Ana</h2>
+        </center>
+        <a href="#" onclick="openModal('Perfil')"><ion-icon
+                name="person-circle-outline"></ion-icon><span>Perfil</span></a>
+        <a href="#" onclick="openModal_2('Pedidos')"><ion-icon
+                name="restaurant-outline"></ion-icon><span>Pedidos</span></a>
+        <a href="#" onclick="openModal_3('Cardápio')"><ion-icon
+                name="clipboard-outline"></ion-icon><span>Cardápio</span></a>
+        <a href="#" onclick="openModal_4('Relatórios')"><ion-icon
+                name="stats-chart-outline"></ion-icon><span>Relatórios</span></a>
+        <a href="#" onclick="openModal_5('Configurações')"><ion-icon
+                name="settings-outline"></ion-icon><span>Configurações</span></a>
+        <a href="#" onclick="openModal_6('Tutorial')"><ion-icon name="logo-youtube"></ion-icon><span>Tutorial</span></a>
+    </div>
+    <!-- sidebar final -->
+
+    <div class="content">
+        <!-- modal perfil -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle">Título do Modal</h2>
+                <div>
+                    <h2>Barra de Ancoragem</h2>
+                    <h3>#Estabelecimento</h3>
+                </div>
+                <div>
+                    <p>Upload Logotipo</p>
+                </div>
+                <div>
+                    <p>Upload Imagem de Fundo</p>
+                </div>
+                <div>
+                    <p>Input Nome do Estabelecimento</p>
+                </div>
+                <div>
+                    <p>Input Telefone (WhatsApp)</p>
+                </div>
+                <div>
+                    <p>Input Descrição do Estabelecimento</p>
+                </div>
+                <div>
+                    <p>Input Valor Minimo para Pedidos</p>
+                </div>
+                <div>
+                    <p>Input Valor de Frete</p>
+                </div>
+                <div>
+                    <h3>#Horário de Funcionamento</h3>
+                </div>
+                <div>
+                    <p>Botão de Fechamento das Atividades (WhatsApp)</p>
+                </div>
+                <div>
+                    <p>Input de lista de horario de Funcionamento</p>
+                </div>
+                <div>
+                    <h3>#Endereço do Estabelecimento</h3>
+                </div>
+                <div>
+                    <p>Input de Endereço</p>
+                </div>
+                <div>
+                    <h3>#Formas de Pagamento</h3>
+                </div>
+                <div>
+                    <p>Input de Formas de Pagamento</p>
+                </div>
+                <br><button id="closeModal" onclick="closeModal()">Fechar</button>
+            </div>
+            <!-- modal pedidos -->
+        </div>
+        <div id="modal_2" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle_2">Título do Modal</h2>
+                <div>
+                    <h3>#Dashboard de Pedidos</h3>
+                </div>
+                <div>
+                    <p>Cód. do pedido</p>
+                    <p>Nome do cliente</p>
+                    <p>Telefone de cliente</p>
+                    <p>Total do pedido</p>
+                    <p>Forma de pagamento</p>
+                    <p>Troco para:</p>
+                    <p>Valor do troco</p>
+                    <p>Botão de resposta com status de Recebido</p>
+                    <p>Botão de resposta com status de Enviando</p>
+                    <p>Botão de impressão do pedidio</p>
+                </div>
+                <br><button id="closeModal_2" onclick="closeModal_2()">Fechar</button>
+            </div>
+        </div>
+        <!-- modal cardápio -->
+        <div id="modal_3" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle_3">Título do Modal</h2>
+                <div>
+                    <h3>#Categorias e Produtos</h3>
+                </div>
+                <div>
+                    <h3>Input Categorias</h3>
+                </div>
+                <div>
+                    <h3>Input Produtos</h3>
+                    <p>Nome</p>
+                    <p>Descrição</p>
+                    <p>Preço</p>
+                    <p>Imagem do Produto</p>
+
+                </div>
+                <br><button id="closeModal_3" onclick="closeModal_3()">Fechar</button>
+            </div>
+        </div>
+        <!-- modal relatórios -->
+        <div id="modal_4" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle_4">Título do Modal</h2>
+                <div>
+                    <h3>#Dashboard de Relatórios</h3>
+                </div>
+                <div>
+                    <p>Relatórios</p>
+                </div>
+                <br><button id="closeModal_4" onclick="closeModal_4()">Fechar</button>
+            </div>
+        </div>
+        <!-- modal configurações -->
+        <div id="modal_5" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle_5">Título do Modal</h2>
+                <div>
+                    <h3>#Configurações</h3>
+                </div>
+                <div>
+                    <p>Input link do facebook</p>
+                </div>
+                <div>
+                    <p>Inout link do Instagram</p>
+                </div>
+                <br><button id="closeModal_5" onclick="closeModal_5()">Fechar</button>
+            </div>
+        </div>
+        <!-- modal vídeo aulas -->
+        <div id="modal_6" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle_6">Título do Modal</h2>
+                <div>
+                    <h3>#Tutorial</h3>
+                </div>
+                <div>
+                    <p>Vídeo aula com tutorial de uso do App</p>
+                </div>
+                <br><button id="closeModal_6" onclick="closeModal_6()">Fechar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/js/modal_cpanel.js"></script>
+
+</body>
+
+</html>
